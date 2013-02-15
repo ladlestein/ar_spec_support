@@ -1,6 +1,7 @@
 # ArSpecSupport
 
-TODO: Write a gem description
+This gem provides you the missing glue code to write specs for code that uses ActiveRecord, specs that use the 'use_transactional_fixture' RSpec flag,
+without requiring Rails or rspec-rails.
 
 ## Installation
 
@@ -18,7 +19,16 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Require the gem in your spec_helper.rb file:
+
+    $ require 'ar_spec_support'
+
+and include the module in your RSpec.configure block:
+
+    $ RSpec.configure do |c|
+    $   c.include ArSpecSupport::FixtureSupport
+    $   ...
+    $ end
 
 ## Contributing
 
